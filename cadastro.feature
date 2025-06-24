@@ -19,15 +19,16 @@ Cenário:Cadastro com campos vazios
 Quando eu tentar finalizar meu cadastro,deixando algum campo em branco
 Então deve aparecer mensagem de erro:'Preencha os campos para prosseguir'
 
+Esquema do Cenário: Validação de campos obrigatórios e formato do e-mail
 Quando eu tentar finalizar meu cadastro com os seguintes dados:
-  | nome         | email               | senha      |
-  | <nome>       | <email>             | <senha>    |
+| nome | email | senha |
 Então deve aparecer a mensagem de erro: "<Mensagem>"
 
 Exemplos:
-  | Nome     | Email                | Senha    | Mensagem                                   |
-  | João     | joao@email.com       | 123456   |                     |
-  |          | joao@email.com       | 123456   | Campos Obrigatórios precisam ser preenchidos     |
-  | João     |                      | 123456   | Campos Obrigatórios precisam ser preenchidos     |
-  | João     | joaoemail.com        | 123456   | Formato de e-mail inválido                        |
-  | João     | joao@email.com       |          | Preencha os campos para prosseguir  
+
+Nome	Email	                  Senha	          Mensagem
+João	joao@email.com	        123456	
+      joao@email.com	        123456	        Campos Obrigatórios precisam ser preenchidos
+João		                      123456	        Campos Obrigatórios precisam ser preenchidos
+João	joaoemail.com	123456	                  Formato de e-mail inválido
+João	joao@email.com		                      Preencha os campos para prosseguir
