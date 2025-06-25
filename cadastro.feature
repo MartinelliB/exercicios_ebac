@@ -20,13 +20,12 @@ Quando eu tentar finalizar meu cadastro,deixando algum campo em branco
 Então deve aparecer mensagem de erro:'Preencha os campos para prosseguir'
 
 Esquema do Cenário: Validação de campos obrigatórios e formato do e-mail
-Quando eu tentar finalizar meu cadastro com os seguintes dados:
-| nome | email | senha |
-Então deve aparecer a mensagem de erro: "<Mensagem>"
+Quando eu tentar finalizar meu cadastro com <nome>,<email> e <senha>
+Então deve aparecer a mensagem de erro: "<mensagem>"
 
 Exemplos:
 
-Nome	Email	                  Senha	          Mensagem
+nome	email	                  senha	          mensagem
 João	joao@email.com	        123456	
       joao@email.com	        123456	        Campos Obrigatórios precisam ser preenchidos
 João		                      123456	        Campos Obrigatórios precisam ser preenchidos
